@@ -96,6 +96,6 @@ normPA = norm(P*A(:,S0),2);
 % the value of objective function F_wp
 E = zeros(k,1);
 for ii=1:k
-    E(ii) = norm(P*A(:,S0)*X(S0,ii)-P*b,'fro')^2 / (normPA^2) + dot(lambda(S0).^2,NX(S0,ii));
+    E(ii) = norm(P*A(:,S0)*X(S0,ii)-P*b,'fro')^2 / (normPA^2)+ gamma*norm(X(S0,ii),2)^2 + dot(lambda(S0).^2,NX(S0,ii));
 end
 end
