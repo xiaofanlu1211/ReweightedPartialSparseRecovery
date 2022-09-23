@@ -25,8 +25,9 @@ function [E,X,x,K] = WPSTRidge(A,D,b,lambda,gamma)
 % ============================================================
 
 % parameters
-[m,n] = size(A); err = 1; k = 2;                      
-MaxIt = n;               % Maximum number of iterations                                   
+[m,n] = size(A); err = 1; k = 2;     
+% Maximum number of iterations 
+MaxIt = n;                                                
 % Expect sparse part
 F = 1:n;                                      
 S0 = setdiff(F,D);
@@ -82,7 +83,7 @@ while k<=MaxIt && err
     
 end
  
-% inner loop iteration numbers
+% inner iteration number
 X(:,k:end) = [];
 k = size(X,2);
 K = k-1;

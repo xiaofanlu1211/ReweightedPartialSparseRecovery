@@ -15,10 +15,10 @@ function [x,lambda,Xout,Xin,kout,kin,F] = RWPSTRidge(A,D,b,lambda0,epsilon,gamma
 % Outputs:
 %   x = the approximate solution of linear system Ax=b
 %   lambda = the lambda at each iteration
-%   Xout = the solution at each out loop iteration
-%   Xin = the solution at each inner loop iteration
-%   kout = iteration times of outer loop
-%   kin = total iteration times of inner loop
+%   Xout = the solution at each out iteration
+%   Xin = the solution at each inner iteration
+%   kout = number of outer iterations
+%   kin = total number of inner iterations
 %   F = the value of objective function F_{wp}(x)
 % Authors: Xiaofan Lu, Huimei Ma, and Linan Zhang
 % Date: Thursday, Sept 1, 2022
