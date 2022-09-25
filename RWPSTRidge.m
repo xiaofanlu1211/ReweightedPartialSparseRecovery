@@ -3,6 +3,8 @@ function [x,lambda,Xout,Xin,kout,kin,F] = RWPSTRidge(A,D,b,lambda0,epsilon,gamma
 % Goal: to solve the linear system Ax=b using the proposed
 %       algorithm when partial support set D of x known a- 
 %       priori.
+% Auxiliary functions:
+%   - WPSTRidge.m (Weighted Partial STRidge Algorithm)
 %
 % Inputs:
 %   A = matrix of size m*n
