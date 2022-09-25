@@ -6,21 +6,16 @@
 %                 (u_{1}^2+u_{2}^2)*(1+0.25*u_{3}) + 0.1*u_{3}*u_{1}^3
 %
 % Auxiliary functions:
-%   - library.m (The Candidate Functions)
-%   - derivative.m (Numerical derivation) 
 %   - RWPSTRidge.m (Reweighted Partial STRidge Algorithm)
-%   - aizawa.m (ODE to Test)
 %
 % Authors: Xiaofan Lu, Huimei Ma, and Linan Zhang
 % Date: Aug, 2022
 % =========================================================================
 
-% Download data u, dictionary matrix A, the legend of coefficient Xi, 
+% Download data u, dictionary matrix A, the legend L of coefficient Xi, 
 % and exact coefficient Xi_true.
-load('aizawa_data.mat')
-load('dictionary_matrix.mat')
-load('dictionary_matrix_legend.mat')
-load('aizawa_Xi_true.mat')
+load('data.mat');
+u = data{1,1}; A = data{2,1}; L = data(3:58); Xi_true = data{59,1};
 % add noise
 eta = 1e-2;                      % variance
 utilde = u+eta*randn(size(u));   % add noise
