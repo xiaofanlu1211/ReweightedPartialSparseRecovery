@@ -78,7 +78,7 @@ while k<=MaxIt && err
     % update
     x(S0) = xnew(S0);                     
     x(D) = A(:,D)\(b - A(:,S0)*x(S0));
-    X(:,k) = x;                       
+    X(:,k) = x;
     k = k+1;
     
 end
