@@ -13,7 +13,7 @@ x_true(1:2:5) = 1;
 eta = 0.1*randn(m,1);                 % construct noise eta~N(0,0.1^2)
 b = A*x_true + eta;                   % construct vector b:= Ax+eta
 D = linspace(1,2,2);                  % dense part/prior known support set of x
-lambda0 = 0.1*ones(n,1);              % initial threshold parameter 
+lambda0 = 0.1*ones(n,1);              % initial thresholding parameter 
 epsilon = 1;                          % reweighted auxiliary parameter
 gamma = 0;                            % ridge parameter
 % Find sparse approximation solution of x
