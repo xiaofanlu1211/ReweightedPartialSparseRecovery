@@ -26,9 +26,9 @@ function [E,X,x,K] = WPSTRidge(A,D,b,lambda,gamma)
 
 % parameters
 [m,n] = size(A); err = 1; k = 2;     
-% Maximum number of iterations 
+% maximum number of iterations 
 MaxIt = n;                                                
-% Expect sparse part
+% x_S0 may be sparse
 F = 1:n;                                      
 S0 = setdiff(F,D);
 % Auxiliary matrix
