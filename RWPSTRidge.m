@@ -39,7 +39,7 @@ lambda(:,1) = lambda0;
 while kout <= MaxIt && err>tol
     % solve the linear system Ax=b
     [E,X,x,K] = WPSTRidge(A,D,b,lambda(:,kout+1),gamma);
-    % update parameters, matrix and compute relative error
+    % update parameters, record x^{k_in}, F_{wp}, and compute relative error
     Xout(:,kout+1) = x;
     if kout == 0
        Xin = X;
