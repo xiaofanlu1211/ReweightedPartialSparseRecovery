@@ -11,3 +11,4 @@ Data: September 23, 2022
 ### Examples: 
 - ex_obj_func.m: tracks the values of the objective function through computing
 - ex_model_selection.m (with data): applies the algorithms to model selection
+- example.m: 
