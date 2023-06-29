@@ -1,5 +1,5 @@
 
-clear all£»
+clear all;
 m = 10;
 n = 5;
 eta = randn(m,1)*1;           % random noise~N(0,1)
