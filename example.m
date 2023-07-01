@@ -1,6 +1,3 @@
-% load('A_3_1.mat');
-% load('eta_3_1.mat');
-
 clear all
 m = 10;
 n = 5;
@@ -31,17 +28,10 @@ b = [-135.99, 62.58, -54.87, -44.93, 93.72, 71.93, -22.70, -105.99, 28.51, 88.82
 Ds = {1, 1:2, 1:3, 1:4};
 for i=1:length(Ds)
     D = Ds{i};
-    %     lambda0 = [0.8*ones(length(D),1);0.2*ones(n-length(D),1)];
-    % %     lambda0 = 0.8*ones(n,1);
-    %     [E,X,x,K] = WPSTRidge(A,D,b,lambda0,gamma);
-    %     disp(x)
-    %     [F,x,lambda,Xout,Xin,kin,kout] = RWPSTRidge(A,D,b,lambda0,epsilon,gamma);
-    %     disp(x)
-
-    lambda0 = [8*ones(length(D),1);8*ones(n-length(D),1)];
+    lambda0 = [8*ones(length(D),1);0.8*ones(n-length(D),1)];
     [E,X,x,K] = WPSTRidge(A,D,b,lambda0,gamma);
     disp(x)
-    [F,x,lambda,Xout,Xin,kin,kout] = RWPSTRidge(A,D,b,lambda0,epsilon,gamma);
+    [x,lambda,Xout,Xin,kin,kout,F] = RWPSTRidge(A,D,b,lambda0,epsilon,gamma);
     disp(x)
 end
 
