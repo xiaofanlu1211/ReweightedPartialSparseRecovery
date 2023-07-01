@@ -2,12 +2,11 @@
 
 Authors: Xiaofan Lu, Huimei Ma, and Linan Zhang
 
-Data: September 23, 2022
+Data: September 23, 2023
 
 ### Algorithms:
 - WPSTRidge.m
 - RWPSTRidge.m
 
 ### Examples: 
-- ex_obj_func.m: tracks the values of the objective function through computing
-- ex_model_selection.m (with data): applies the algorithms to model selection
+- example.m (with data): applies the algorithms to sparse recovery
