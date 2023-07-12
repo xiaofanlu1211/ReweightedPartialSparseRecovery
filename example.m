@@ -28,7 +28,13 @@ gamma = 0;
 
 Ds = {1, 1:2, 1:3, 1:4};          
 for i=1:length(Ds)
-    D = Ds{i};                      
+    D = Ds{i};  
+%     lambda0 = 8*ones(n,1);
+%     [E,X,x,K] = WPSTRidge(A,D,b,lambda0,gamma);
+%     disp(x)
+%     [x,lambda,Xout,Xin,kout,kin,F] = RWPSTRidge(A,D,b,lambda0,epsilon,gamma);
+%     disp(x)
+    
     lambda0 = [8*ones(length(D),1);0.8*ones(n-length(D),1)];
     [E,X,x,K] = WPSTRidge(A,D,b,lambda0,gamma);
     disp(x)
