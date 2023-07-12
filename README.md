@@ -2,7 +2,7 @@
 
 Authors: Xiaofan Lu, Huimei Ma, and Linan Zhang
 
-Data: September 23, 2023
+Data: September 23, 2022
 
 ### Algorithms:
 - WPSTRidge.m
